@@ -50,7 +50,7 @@ ficher_a_lire = os.path.join("csvs", "Ex6 Competences.csv")
 #Si l'exigence est  'Exigé' imprimez cette ligne
 
 repertoire = os.getcwd()
-with open(repertoire + "\\" + ficher_a_lire, "r", encoding ="utf-8") as fichierlu :
+with open(ficher_a_lire, "r", encoding ="utf-8") as fichierlu :
     lecteur_csv = csv.reader(fichierlu, delimiter="/")
     entete = next(lecteur_csv)
     print(f"Les entêtes de la première ligne: {entete}")

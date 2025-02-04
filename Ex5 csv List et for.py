@@ -58,11 +58,13 @@ ficher_a_lire_TI = os.path.join("csvs", "Ex5 Stages TI.csv")
 
 #repertoire = "C:\\Users\9055224\\OneDrive - Cégep Édouard-Montpetit\H2025\\420-2N6-EM - Programmation 2\\OneDrive_2025-01-30\\R03 Exercices Depart\\csvs\\"
 repertoire = os.getcwd()
-with open(repertoire + "\\" + ficher_a_lire, "r", encoding ="utf-8") as fichier_lu :
+#with open(repertoire + "\\" + ficher_a_lire, "r", encoding ="utf-8") as fichier_lu :
+with open(ficher_a_lire, "r", encoding ="utf-8") as fichier_lu :
     lecteur_csv = csv.reader(fichier_lu, delimiter="|")
     entetes = next(lecteur_csv)
       
-    with open(repertoire + "\\" + ficher_a_lire_TI, "w", encoding ="utf-8") as fichier_ecrit :
+    #with open(repertoire + "\\" + ficher_a_lire_TI, "w", encoding ="utf-8") as fichier_ecrit :
+    with open(ficher_a_lire_TI, "w", encoding ="utf-8") as fichier_ecrit :
         ecriveur_cvs = csv.writer(fichier_ecrit, delimiter='|', lineterminator="\n")
         ecriveur_cvs.writerow(entetes)
         for ligne_fichier in lecteur_csv :

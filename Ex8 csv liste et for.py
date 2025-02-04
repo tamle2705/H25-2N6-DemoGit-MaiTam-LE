@@ -2,7 +2,7 @@ import os                             # N'enlevez pas ces lignes.
 os.chdir(os.path.dirname(__file__))   # Elles permettent de se positionner dans le répertoire de ce script
 
 # Importez csv
-
+import csv
 
  
 
@@ -53,4 +53,18 @@ os.chdir(os.path.dirname(__file__))   # Elles permettent de se positionner dans 
 #      En dehors de toute boucle, utilisez sorted() pour trier la liste et obtenir une nouvelle liste triée
 #      Imprimez votre nouvelle liste triée
 
+ficher_a_lire = os.path.join("csvs", "Ex7 Lan Party.csv")
+
+liste_jeux = []
+
+with open(ficher_a_lire, "r", encoding ="utf-8") as fichierlu :
+    lecteur_csv = csv.reader(fichierlu,delimiter=";")
+    next(lecteur_csv)
+    for ligne_fichier in lecteur_csv :
+            jeux_3 = ligne_fichier[1:4]
+            for chaque_jeu in jeux_3 :
+                  if liste_jeux.count(chaque_jeu) == 0 :
+                        liste_jeux.append(chaque_jeu)
+    nouvelle_list = sorted(liste_jeux)
+    print(nouvelle_list) 
 
