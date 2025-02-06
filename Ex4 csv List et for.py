@@ -54,8 +54,8 @@ ficher_a_lire = os.path.join("csvs","Ex4 Emplois Reseautique.csv" )
 #      Vérifiez sa valeur et si elle est 'Dec' ou 'Non déterminé' imprimez l'offre d'emploi
 
 #repertoire = "C:\\Users\9055224\\OneDrive - Cégep Édouard-Montpetit\H2025\\420-2N6-EM - Programmation 2\\OneDrive_2025-01-30\\R03 Exercices Depart\\csvs\\"
-repertoire = os.getcwd()
-with open(repertoire + "\\" + ficher_a_lire, "r", encoding ="utf-8") as fichier_lu :
+#repertoire = os.getcwd()
+with open(ficher_a_lire, "r", encoding ="utf-8") as fichier_lu :
     lecteur_csv = csv.reader(fichier_lu, delimiter=";")
     next(lecteur_csv)
     for ligne_fichier in lecteur_csv :

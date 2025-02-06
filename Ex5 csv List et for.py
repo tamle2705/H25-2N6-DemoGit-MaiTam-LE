@@ -57,7 +57,7 @@ ficher_a_lire_TI = os.path.join("csvs", "Ex5 Stages TI.csv")
         #      Si oui, écrivez cette ligne dans le fichier des stages en TI.
 
 #repertoire = "C:\\Users\9055224\\OneDrive - Cégep Édouard-Montpetit\H2025\\420-2N6-EM - Programmation 2\\OneDrive_2025-01-30\\R03 Exercices Depart\\csvs\\"
-repertoire = os.getcwd()
+#repertoire = os.getcwd()
 #with open(repertoire + "\\" + ficher_a_lire, "r", encoding ="utf-8") as fichier_lu :
 with open(ficher_a_lire, "r", encoding ="utf-8") as fichier_lu :
     lecteur_csv = csv.reader(fichier_lu, delimiter="|")

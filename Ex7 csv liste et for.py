@@ -18,7 +18,7 @@ import csv
 
 ficher_a_lire = os.path.join("csvs", "Ex7 Lan Party.csv")
 
-repertoire = os.getcwd()
+#repertoire = os.getcwd()
 with open(ficher_a_lire, "r", encoding ="utf-8") as fichierlu :
     lecteur_csv = csv.reader(fichierlu,delimiter=";")
     next(lecteur_csv)
